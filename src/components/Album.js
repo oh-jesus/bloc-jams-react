@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Album = () => (
-  <section className="Album">
-    these are the breaks
-  </section>
-);
+class Album extends Component {
+  render() {
+    return (
+      <section className="Album">
+        {this.props.match.params.slug} these albums
+      </section>
+    );
+  }
+}
+
 
 export default Album;
