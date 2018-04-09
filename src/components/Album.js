@@ -65,8 +65,15 @@ class Album extends Component {
          <tbody>
             {this.state.album.songs.map( (song, index) =>
              <tr className="song" key={index} onclick={() => this.handleSongClick(song)} >
+               <td className="song-actions">
+                   <button>
+                     <span className="song-number">{index+1}</span>
+                     <span className="ion-play"></span>
+                     <span className="ion-pause"></span>
+                   </button>
+               </td>
                <td className="song-title">{song.title}</td>
-                 <td className="song-duration">{song.duration}</td>
+               <td className="song-duration">{song.duration}</td>
              </tr>
              )}
          </tbody>
