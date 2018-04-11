@@ -40,7 +40,7 @@ class Album extends Component {
 
   componentWillUnmount() {
     this.audioElement.src = null;
-    this.audioElement.removeEventListener('timeUpdate', this.addEventListeners.timeUpdate);
+    this.audioElement.removeEventListener('timeUpdate', this.eventListeners.timeUpdate);
     this.audioElement.removeEventListener('durationChange', this.eventListeners.durationChange);
   }
 
@@ -100,7 +100,7 @@ class Album extends Component {
     if(sec == NaN){
       return "-:--"
     } else {
-      return Math.floor(sec / 60) + ":" + (sec % 60 ? sec % 60 : '00')
+      return Math.floor(sec / 60) + ":" + Math.floor(sec % 60 ? sec % 60 : '00')
     }
   }
 
