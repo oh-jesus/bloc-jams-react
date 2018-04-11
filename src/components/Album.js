@@ -147,6 +147,7 @@ class Album extends Component {
          handleNextClick={() =>this.handleNextClick()}
          handleTimeChange={(e) =>this.handleTimeChange(e)}
          handleVolumeChange={(e) =>this.handleVolumeChange(e)}
+         formatTime={(e) => this.formatTime(e)}
          />
       </section>
     );
